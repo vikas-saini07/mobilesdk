@@ -23,8 +23,8 @@ if (intercept('PUT')) {
     // build path
     $orderId = requiredQueryParam('order');
     $txnId = requiredQueryParam('transaction');
-    $threeDSId = requiredQueryParam('3DSecureId');
-    $path = '/order/' . $orderId . '/transaction/' . $txnId . '/3DSecureId/' . $threeDSId;
+    //$threeDSId = requiredQueryParam('3DSecureId');
+    $path = '/order/' . $orderId . '/transaction/' . $txnId;
 
     proxyCall($path);
 }
